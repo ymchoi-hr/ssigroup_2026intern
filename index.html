@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+<html lang="ko" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 인턴 채용 공고</title>
+    <style>
+      /* Base Reset & Fonts */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Pretendard', 'Malgun Gothic', '맑은 고딕', sans-serif;
+        background-color: #f9f9f9;
+        color: #333333;
+        line-height: 1.5;
+      }
+
+      /* Container */
+      .recruit-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border: 1px solid #e1e1e1;
+      }
+
+      /* Header Image */
+      .header-image {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .header-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Company Introduction */
+      .company-intro {
+        padding: 30px 25px 20px 25px;
+        background-color: #ffffff;
+        border-bottom: 1px solid #e8e8e8;
+      }
+
+      .company-intro p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.8;
+        color: #333333;
+        word-break: keep-all;
+        letter-spacing: -0.3px;
+      }
+
+      .company-intro strong {
+        color: rgb(0, 191, 182);
+        font-weight: 700;
+      }
+
+      /* Header Section */
+      .recruit-header {
+        background-color: rgb(39, 54, 70); /* Fallback */
+        background: linear-gradient(135deg, rgb(39, 54, 70) 0%, rgb(0, 191, 182) 100%);
+        padding: 40px 20px;
+        text-align: center;
+        color: #ffffff;
+      }
+
+      .recruit-header h1 {
+        margin: 0 0 15px 0;
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: -0.5px;
+      }
+
+      .recruit-header p {
+        margin: 0;
+        font-size: 16px;
+        opacity: 0.9;
+        word-break: keep-all;
+      }
+
+      /* Content Section */
+      .recruit-content {
+        padding: 12px 20px 30px 20px;
+      }
+
+      /* Table Styling */
+      .recruit-table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-top: 10px;
+      }
+
+      .recruit-table th {
+        border-bottom: 2px solid rgb(0, 191, 182);
+        padding: 15px 10px;
+        text-align: left;
+        font-size: 16px;
+        color: rgb(39, 54, 70);
+        font-weight: bold;
+      }
+
+      .recruit-table td {
+        border-bottom: 1px solid #eeeeee;
+        padding: 15px 10px;
+        vertical-align: middle;
+      }
+
+      .recruit-table td:first-child {
+        width: 75%;
+      }
+
+      .recruit-table td:last-child {
+        width: 25%;
+        text-align: center;
+        padding-right: 5px;
+      }
+
+      .recruit-table tr:hover td {
+        background-color: #f8fbfa; /* Subtle hover effect */
+      }
+
+      /* Position Info */
+      .dept-tag {
+        display: block;
+        font-size: 13px;
+        color: rgb(100, 100, 100);
+        margin-bottom: 5px;
+        font-weight: 400;
+      }
+
+      .position-title {
+        font-size: 17px;
+        color: rgb(39, 54, 70);
+        font-weight: 700;
+        display: inline-block;
+        margin-right: 8px;
+        vertical-align: middle;
+        letter-spacing: -0.3px;
+      }
+
+      /* Info Badges */
+      .info-badge {
+        display: inline-block;
+        padding: 3px 7px;
+        background-color: rgb(208, 182, 137);
+        color: rgb(39, 54, 70);
+        font-size: 11px;
+        border-radius: 3px;
+        margin-right: 5px;
+        font-weight: 500;
+        vertical-align: middle;
+        letter-spacing: -0.2px;
+      }
+
+      /* Button Styling */
+      .btn-apply {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: rgb(0, 191, 182);
+        color: #ffffff !important;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        transition: background-color 0.2s;
+        white-space: nowrap;
+      }
+
+      .btn-apply:hover {
+        background-color: rgb(39, 54, 70);
+      }
+
+      /* Notice Section */
+      .notice-section {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        padding: 8px 10px 4px 10px;
+        text-align: left;
+        font-size: 13px;
+        color: #333333;
+        line-height: 1.6;
+      }
+
+      /* Footer */
+      .recruit-footer {
+        background-color: #f5f5f5;
+        padding: 30px 20px;
+        text-align: center;
+        font-size: 13px;
+        color: rgb(153, 153, 153);
+        border-top: 1px solid #eeeeee;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .footer-btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: rgb(39, 54, 70);
+        color: #ffffff !important;
+        text-decoration: none;
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        transition: all 0.3s;
+        box-shadow: 0 2px 8px rgba(39, 54, 70, 0.2);
+        flex: 1;
+        max-width: 350px;
+        min-width: 250px;
+      }
+
+      .footer-btn:hover {
+        background-color: rgb(0, 191, 182);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 191, 182, 0.3);
+      }
+
+      /* Mobile Responsive */
+      @media screen and (max-width: 600px) {
+        .recruit-header h1 {
+          font-size: 24px;
+        }
+
+        .recruit-table th {
+          display: none; /* Hide headers on mobile for cleaner look */
+        }
+
+        .recruit-table td {
+          display: block;
+          padding: 10px 10px;
+          text-align: center;
+          border-bottom: none;
+        }
+
+        .recruit-table tr {
+          border-bottom: 1px solid #eeeeee;
+          display: block;
+          padding: 10px 0;
+        }
+
+        .recruit-table td:last-child {
+          padding-top: 5px;
+          padding-bottom: 15px;
+        }
+
+        .btn-apply {
+          width: 90%; /* Full width button on mobile */
+          max-width: 300px;
+        }
+
+        .recruit-footer {
+          flex-direction: column; /* Stack buttons vertically on mobile */
+        }
+
+        .footer-btn {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body style="">
+    <div class="recruit-container">
+      <!-- Header Image -->
+      <div class="header-image">
+        <img src="https://www.genspark.ai/api/files/s/igx4r7La" alt="상상인 채용 배너" data-height-listener-added="true">
+      </div>
+      
+      <!-- Company Introduction -->
+      <div class="company-intro">
+        <p>
+          상상인 그룹은 IT, 금융, 조선기계·중공업, 제약/바이오, 의료기기 등 다양한 산업에서 사업을 전개하고 있는 매출 8,700억 규모의 탄탄한 중견 기업입니다.<br>
+          다양한 계열사 간 지속적이고 전략적인 연계로 산업의 경계를 넘어 새로운 가치를 창출하고 있는 <strong>상상인 그룹의 힘찬 여정에 함께할 인턴을 찾습니다!</strong>
+        </p>
+      </div>
+      
+      <!-- Content -->
+      <div class="recruit-content">
+        <table class="recruit-table">
+
+          <tbody>
+            <!-- Position 1 -->
+            <tr>
+              <td>
+                <span class="dept-tag">[상상인/사업3본부]</span>
+                <span class="position-title">Network Sales Business 지원</span>
+                <span class="info-badge">서울(여의도)</span>
+                <span class="info-badge">채용연계형</span>
+              </td>
+              <td>
+                <a href="https://jnnzyob6.ninehire.site/job_posting/EnxLhQO6" class="btn-apply" target="_blank">지원하기</a>
+              </td>
+            </tr>
+            <!-- Position 2 -->
+            <tr>
+              <td>
+                <span class="dept-tag">[상상인/사업3본부]</span>
+                <span class="position-title">사업본부 Network Engineer</span>
+                <span class="info-badge">경기도(분당)</span>
+                <span class="info-badge">채용연계형</span>
+              </td>
+              <td>
+                <a href="https://jnnzyob6.ninehire.site/job_posting/pHlOArrM" class="btn-apply" target="_blank">지원하기</a>
+              </td>
+            </tr>
+            <!-- Position 3 -->
+            <tr>
+              <td>
+                <span class="dept-tag">[상상인/기술본부]</span>
+                <span class="position-title">기술본부 Network Engineer</span>
+                <span class="info-badge">서울(여의도)</span>
+                <span class="info-badge">채용연계형</span>
+              </td>
+              <td>
+                <a href="https://jnnzyob6.ninehire.site/job_posting/LepSFBns" class="btn-apply" target="_blank">지원하기</a>
+              </td>
+            </tr>
+            <!-- Position 4 -->
+            <tr>
+              <td>
+                <span class="dept-tag">[상상인/신사업개발본부]</span>
+                <span class="position-title">AI Agent 개발</span>
+                <span class="info-badge">서울(여의도)</span>
+                <span class="info-badge">채용연계형</span>
+              </td>
+              <td>
+                <a href="https://jnnzyob6.ninehire.site/job_posting/bY1i4WRQ" class="btn-apply" target="_blank">지원하기</a>
+              </td>
+            </tr>
+            <!-- Position 5 -->
+            <tr>
+              <td>
+                <span class="dept-tag">[상상인/보안사업팀]</span>
+                <span class="position-title">보안 솔루션 비즈니스 지원</span>
+                <span class="info-badge">서울(여의도)</span>
+                <span class="info-badge">채용연계형</span>
+              </td>
+              <td>
+                <a href="https://jnnzyob6.ninehire.site/job_posting/uPkhOQaZ" class="btn-apply" target="_blank">지원하기</a>
+              </td>
+            </tr>
+            <!-- Position 6 -->
+            <tr>
+              <td>
+                <span class="dept-tag">[상상인/IT서비스사업팀]</span>
+                <span class="position-title">Business Architecture</span>
+                <span class="info-badge">서울(여의도)</span>
+                <span class="info-badge">채용연계형</span>
+              </td>
+              <td>
+                <a href="https://jnnzyob6.ninehire.site/job_posting/RWRjBjbr" class="btn-apply" target="_blank">지원하기</a>
+              </td>
+            </tr>
+            <!-- Position 7 -->
+            <tr>
+              <td>
+                <span class="dept-tag">[상상인/IT서비스사업팀]</span>
+                <span class="position-title">그룹웨어 개발/운영</span>
+                <span class="info-badge">서울(여의도)</span>
+                <span class="info-badge">채용연계형</span>
+              </td>
+              <td>
+                <a href="https://jnnzyob6.ninehire.site/job_posting/4alzNhd0" class="btn-apply" target="_blank">지원하기</a>
+              </td>
+            </tr>
+            <!-- Position 8 -->
+            <tr>
+              <td>
+                <span class="dept-tag">[상상인/인재경영실]</span>
+                <span class="position-title">그룹 HR</span>
+                <span class="info-badge">서울(여의도)</span>
+                <span class="info-badge">채용연계형</span>
+              </td>
+              <td>
+                <a href="https://jnnzyob6.ninehire.site/job_posting/2KdsjhGh" class="btn-apply" target="_blank">지원하기</a>
+              </td>
+            </tr>
+            <!-- Position 9 -->
+            <tr>
+              <td>
+                <span class="dept-tag">[상상인/기획팀]</span>
+                <span class="position-title">그룹 경영기획</span>
+                <span class="info-badge">서울(여의도)</span>
+                <span class="info-badge">체험형</span>
+              </td>
+              <td>
+                <a href="https://jnnzyob6.ninehire.site/job_posting/pIGTWYKI" class="btn-apply" target="_blank">지원하기</a>
+              </td>
+            </tr>
+            <!-- Position 10 -->
+            <tr>
+              <td>
+                <span class="dept-tag">[상상인/컬처앤피플실]</span>
+                <span class="position-title">HR 기획</span>
+                <span class="info-badge">서울(여의도)</span>
+                <span class="info-badge">채용연계형</span>
+              </td>
+              <td>
+                <a href="https://jnnzyob6.ninehire.site/job_posting/lo19AuSF" class="btn-apply" target="_blank">지원하기</a>
+              </td>
+            </tr>
+            <!-- Position 11 -->
+            <tr>
+              <td>
+                <span class="dept-tag">[엠아이텍/D&amp;UE팀]</span>
+                <span class="position-title">Medical Device R&amp;D 지원</span>
+                <span class="info-badge">서울(삼성)</span>
+                <span class="info-badge">체험형</span>
+              </td>
+              <td>
+                <a href="https://jnnzyob6.ninehire.site/job_posting/MXykLpdd" class="btn-apply" target="_blank">지원하기</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <!-- Notice Section -->
+        <div class="notice-section">
+          • 포지션별로 근무 위치, 근무 기간, 인턴 유형이 상이합니다. 자세한 내용은 공고를 확인 바랍니다.
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="recruit-footer">
+        <a href="https://clumsy-cantaloupe-1be.notion.site/2aa138792118819fa542e15dd200a086" class="footer-btn" target="_blank">상상인을 자세히 들여다보고 싶다면 Click!</a>
+        <a href="https://mitech.career.greetinghr.com/ko/company" class="footer-btn" target="_blank">엠아이텍을 자세히 들여다보고 싶다면 Click!</a>
+      </div>
+    </div>
